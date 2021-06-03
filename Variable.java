@@ -15,6 +15,5 @@ public class Variable {
         System.out.println("Вес устройства: " + weight);
         System.out.println("Наличия wifi: " + wifi);
         System.out.println("Наличия bluetooth: " + bluetooth);
-
     }
 }
