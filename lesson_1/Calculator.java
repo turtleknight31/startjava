@@ -1,9 +1,9 @@
 public class Calculator {
     public static void main(String[] args) {
         char sign = '^';
-        int num1 = 3;
-        int num2 = 2;
-        int result = 1;
+        double num1 = 3;
+        double num2 = 2;
+        double result = 1;
         
         if(sign == '+') {
             result = num1 + num2;
