@@ -4,6 +4,7 @@ public class Calculator {
         int num1 = 3;
         int num2 = 2;
         int result = 1;
+        
         if(sign == '+') {
             result = num1 + num2;
             System.out.println("Сумма num1 и num2 будет равным: " + result);
