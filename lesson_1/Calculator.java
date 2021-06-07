@@ -19,7 +19,7 @@ public class Calculator {
             System.out.println("Деления num1 и num2 будет равным: " + result);
         } else if(sign == '^') {
             for(int i = 1; i <= num2; i++) {
-                result = result * num1;
+                result *= num1;
             }
             System.out.println("num1 в степени num2 будет равным: " + result);
         } else if(sign == '%') {
