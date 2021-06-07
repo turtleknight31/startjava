@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class MyFirstGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int ComputerNumber = 45;
         int UserNumber = 0;
+        int ComputerNumber = 45;
         do {
             System.out.print("Введите число: ");
             UserNumber = scanner.nextInt();
