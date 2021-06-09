@@ -1,9 +1,9 @@
 public class Wolf {
-    String male = "Woman";
-    String name = "Alfa";
-    String color = "White";
-    float weight = 20.6f;
-    int age = 5;
+    String male;
+    String name;
+    String color;
+    float weight;
+    int age;
 
     boolean walk() {
         System.out.print("Вы идете: ");
