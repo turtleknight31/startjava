@@ -11,7 +11,7 @@ public class Person {
     }
 
     String sit() {
-        retun "Вы сели";
+        return "Вы сели";
     }
 
     boolean run() {
@@ -23,6 +23,6 @@ public class Person {
     }
 
     String studyJava() {
-        retrun "activated"
+        return "activated"
     }
 }
