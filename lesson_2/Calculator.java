@@ -1,11 +1,12 @@
 public class Calculator {
 
     String sign;
+    String choice = "yes";
     float num1;
     float num2;
     float result = 1;
     boolean cont;
-    String choice = "yes";
+
 
     public void setSign(String sign) {
         this.sign = sign;
