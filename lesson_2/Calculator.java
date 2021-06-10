@@ -1,8 +1,8 @@
 public class Calculator {
 
-     String sign;
-     float num1;
-     float num2;
+    String sign;
+    float num1;
+    float num2;
     float result = 1;
     boolean cont;
     String choice = "yes";
