@@ -4,7 +4,6 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculateNum = new Calculator();
 
-
         Scanner numbers = new Scanner(System.in);
         Scanner sign = new Scanner(System.in);
 
