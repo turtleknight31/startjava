@@ -7,7 +7,6 @@ public class Calculator {
     float result = 1;
     boolean cont;
 
-
     public void setSign(String sign) {
         this.sign = sign;
     }
