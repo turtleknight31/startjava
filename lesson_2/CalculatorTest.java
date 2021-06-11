@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         String choice = "yes";
-        boolean cont;
         Calculator calculator = new Calculator();
         Scanner scan = new Scanner(System.in);
 
@@ -23,14 +22,11 @@ public class CalculatorTest {
                 choice = scan.next();
                 if(choice.equals("no")) {
                     System.out.println("Вы завершили вычисления!");
-                    cont = true;
                 } else if(choice.equals("yes")) {
-                    cont = true;
                 } else {
                     System.out.println("Повторите пожалуйста ввод: ");
-                    cont = false;
                 }
-            } while(!cont);
+            } while(!choice.equals("no") && !choice.equals("yes"));
         } while(choice.equals("yes"));
     }
 }
