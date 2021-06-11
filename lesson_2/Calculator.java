@@ -1,11 +1,8 @@
 public class Calculator {
 
-    String sign;
-    String choice = "yes";
-    float num1;
-    float num2;
-    float result = 1;
-    boolean cont;
+    public String sign;
+    public float num1;
+    public float num2;
 
     public void setSign(String sign) {
         this.sign = sign;
@@ -19,41 +16,22 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public void setChoice(String choice) {
-        this.choice = choice;
-    }
-
-    public String getChoice() {
-    return choice;
-    }
-
-    public void setCont(boolean cont) {
-        this.cont = cont;
-    }
-
-    public boolean getCont() {
-    return cont;
-    }
-
-    public void calculateNumbers() {
+    public void calculate() {
         switch(sign) {
             case "+":
-                result = num1 + num2;
-                System.out.println("Сумма num1 и num2 будет равным: " + result);
+                System.out.println(num1 + num2);
                 break;
             case "-":
-                result = num1 - num2;
-                System.out.println("Разность num1 и num2 будет равным: " + result);
+                System.out.println(num1 - num2);
                 break;
             case "*":
-                result = num1 * num2;
-                System.out.println("Умножения num1 и num2 будет равным: " + result);
+                System.out.println(num1 * num2);
                 break;
             case "/":
-                result = num1 / num2;
-                System.out.println("Деления num1 и num2 будет равным: " + result);
+                System.out.println(num1 / num2);
                 break;
-                case "^":
+            case "^":
+                float result = 1;
                 for(int i = 1; i <= num2; i++) {
                     result *= num1;
                 }
@@ -61,8 +39,8 @@ public class Calculator {
                 break;
             case "%":
                 result = num1 % num2;
-                System.out.println("Остаток от деления будет равным: " + result);
+                System.out.println(num1 % num2);
                 break;
-            }
         }
+    }
 }
