@@ -2,34 +2,35 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        Calculator calculateNum = new Calculator();
-        Scanner numbers = new Scanner(System.in);
-        Scanner sign = new Scanner(System.in);
+        String choice = "yes";
+        boolean cont;
+        Calculator calculator = new Calculator();
+        Scanner scan = new Scanner(System.in);
 
         do {
             System.out.print("Введите первое число: ");
-            calculateNum.setNum1(numbers.nextInt());
+            calculator.setNum1(scan.nextInt());
 
             System.out.print("Введите знак: ");
-            calculateNum.setSign(sign.nextLine());
+            calculator.setSign(scan.next());
 
             System.out.print("Введите второе число: ");
-            calculateNum.setNum2(numbers.nextInt());
-            calculateNum.calculateNumbers();
+            calculator.setNum2(scan.nextInt());
+            calculator.calculate();
 
             do {
                 System.out.print("Вы хотите продолжить?[yes/no]: ");
-                calculateNum.setChoice(sign.nextLine());
-                if(calculateNum.getChoice().equals("no")) {
+                choice = scan.next();
+                if(choice.equals("no")) {
                     System.out.println("Вы завершили вычисления!");
-                    calculateNum.setCont(true);
-                } else if(calculateNum.getChoice().equals("yes")) {
-                    calculateNum.setCont(true);
+                    cont = true;
+                } else if(choice.equals("yes")) {
+                    cont = true;
                 } else {
                     System.out.println("Повторите пожалуйста ввод: ");
-                    calculateNum.setCont(false);
+                    cont = false;
                 }
-            } while(!calculateNum.getCont());
-        } while(calculateNum.getChoice().equals("yes"));
+            } while(!cont);
+        } while(choice.equals("yes"));
     }
 }
