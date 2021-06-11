@@ -36,13 +36,5 @@ public class JaegerTest {
         System.out.println("Сила 2: " + jaegerTwo.getStrength());
         System.out.println("Броня 1: " + jaegerOne.getArmor());
         System.out.println("Броня 2: " + jaegerTwo.getArmor());
-
-        //System.out.println("Высота: " + jaegerOne.height);
-        //jaegerOne.height = -5;
-        //System.out.println("Высота: " + jaegerOne.height);
-
-        /*System.out.println("Марка: " + jaegerOne.mark);
-        System.out.println("Скорость: " + jaegerOne.speed);
-        System.out.println("Метод дрифт: " + jaegerOne.drift());*/
     }
 }
