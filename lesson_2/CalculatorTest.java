@@ -21,12 +21,12 @@ public class CalculatorTest {
                 System.out.print("Вы хотите продолжить?[yes/no]: ");
                 choice = scan.next();
                 if(choice.equals("no")) {
-                    System.out.println("Вы завершили вычисления!");
                 } else if(choice.equals("yes")) {
                 } else {
                     System.out.println("Повторите пожалуйста ввод: ");
                 }
             } while(!choice.equals("no") && !choice.equals("yes"));
         } while(choice.equals("yes"));
+        System.out.println("Вы завершили вычисления!");
     }
 }
