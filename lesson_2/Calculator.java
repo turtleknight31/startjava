@@ -38,7 +38,6 @@ public class Calculator {
                 System.out.println("num1 в степени num2 будет равным: " + result);
                 break;
             case "%":
-                result = num1 % num2;
                 System.out.println(num1 % num2);
                 break;
         }
