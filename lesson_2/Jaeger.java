@@ -1,13 +1,13 @@
 public class Jaeger {
     
-    private String modelName; //названия робота
-    private String mark; //марка
-    private String origin; //страна
-    private float height; //высота
-    private float weight; //вес
-    private int speed; //скорость
-    private int strength; //сила
-    private int armor; //броня
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+    private int speed;
+    private int strength;
+    private int armor;
 
     public String getModuleName() {
         return modelName;
