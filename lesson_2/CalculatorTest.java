@@ -20,9 +20,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Вы хотите продолжить?[yes/no]: ");
                 choice = scan.next();
-                if(choice.equals("no")) {
-                } else if(choice.equals("yes")) {
-                } else {
+                if(!choice.equals("no") && !choice.equals("yes")) {
                     System.out.println("Повторите пожалуйста ввод: ");
                 }
             } while(!choice.equals("no") && !choice.equals("yes"));
