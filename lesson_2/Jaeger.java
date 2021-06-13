@@ -1,12 +1,12 @@
 public class Jaeger {
-        String modelName;
-        String mark;
-        String origin;
-        float height;
-        float weight;
-        int speed;
-        int strength;
-        int armor;
+        private String modelName;
+        private String mark;
+        private String origin;
+        private float height;
+        private float weight;
+        private int speed;
+        private int strength;
+        private int armor;
 
     public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {
         this.modelName = modelName;
