@@ -1,26 +1,26 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class GuessNumberTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Random rand = new Random();
-        GuessNumber guessNumberGo = new GuessNumber();
-        System.out.print("Первый игрок: ");
-        Player firstPlayer = new Player(scan.nextLine());
-        System.out.print("Второй игрок: ");
-        Player secondPlayer = new Player(scan.nextLine());
-
-        guessNumberGo.setComputerNumber(rand.nextInt(99) + 1);
-
+        String choice = "yes";
         do {
-            guessNumberGo.guessN();
-        } while(guessNumberGo.getLuckyShot() != 1);
-
-        if(guessNumberGo.getWho()) {
-            System.out.println(firstPlayer.getName() + ", Поздравляю ты выиграл!!");
-        } else {
-            System.out.println(secondPlayer.getName()+ ", Поздравляю ты выиграл!!");
-        }
+            GuessNumber game = new GuessNumber();
+            System.out.print("Введите имя первого игрока: ");
+            game.firstPlayer();
+            System.out.print("Введите имя второго игрока: ");
+            game.secondPlayer();
+        
+            do {
+                game.start();
+            } while(game.getLuckyShot() != 1);
+            do {
+                System.out.print("Вы хотите продолжить?[yes/no]: ");
+                choice = scan.next();
+                if(!choice.equals("no") && !choice.equals("yes")) {
+                    System.out.println("Повторите пожалуйста ввод: ");
+                }
+            } while(!choice.equals("no") && !choice.equals("yes"));
+        } while(choice.equals("yes"));
     }
 }
