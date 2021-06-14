@@ -1,12 +1,12 @@
 public class Jaeger {
-        private String modelName;
-        private String mark;
-        private String origin;
-        private float height;
-        private float weight;
-        private int speed;
-        private int strength;
-        private int armor;
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+    private int speed;
+    private int strength;
+    private int armor;
 
     public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {
         this.modelName = modelName;
@@ -68,7 +68,7 @@ public class Jaeger {
     }
 
     public void setWeight(float weight) {
-            this.weight = weight;
+        this.weight = weight;
     }
 
     public int getSpeed() {
@@ -76,7 +76,7 @@ public class Jaeger {
     }
 
     public void setSpeed(int speed) {
-            this.speed = speed;
+        this.speed = speed;
     }
 
     public int getStrength() {
@@ -84,7 +84,7 @@ public class Jaeger {
     }
 
     public void setStrength(int strength) {
-            this.strength = strength;
+        this.strength = strength;
     }
 
     public int getArmor() {
@@ -92,7 +92,7 @@ public class Jaeger {
     }
 
     public void setArmor(int armor) {
-            this.armor = armor;
+        this.armor = armor;
     }
 
     public boolean drift() {
