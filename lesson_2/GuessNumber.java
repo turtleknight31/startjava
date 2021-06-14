@@ -11,22 +11,6 @@ public class GuessNumber {
     private String firstName;
     private String secondName;
 
-    public int getComputerNumber() {
-        return computerNumber;
-    }
-
-    public int getUserNumber() {
-        return userNumber;
-    }
-
-    public void setUserNumber(int userNumber) {
-        this.userNumber = userNumber;
-    }
-
-    public boolean getWho() {
-        return who;
-    }
-
     public byte getLuckyShot() {
         return luckyShot;
     }
