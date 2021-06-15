@@ -11,10 +11,6 @@ public class GuessNumber {
     Player first;
     Player second;
 
-    public byte getLuckyShot() {
-        return luckyShot;
-    }
-
     public GuessNumber(Player first, Player second) {
         this.first = first;
         this.second = second;
