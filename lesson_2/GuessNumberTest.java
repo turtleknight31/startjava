@@ -11,8 +11,7 @@ public class GuessNumberTest {
             game.firstPlayer();
             System.out.print("Введите имя второго игрока: ");
             game.secondPlayer();
-
-        
+            
             do {
                 game.start();
             } while(game.getLuckyShot() != 1);
