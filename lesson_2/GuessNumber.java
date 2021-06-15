@@ -10,17 +10,9 @@ public class GuessNumber {
     private byte luckyShot = 0;
     Player first;
     Player second;
-    
+
     public byte getLuckyShot() {
         return luckyShot;
-    }
-
-    public void firstPlayer() {
-         first = new Player(scanner.nextLine());
-    }
-
-    public void secondPlayer() {
-        second = new Player(scanner.nextLine());
     }
 
     public void start() {
