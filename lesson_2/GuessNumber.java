@@ -8,8 +8,8 @@ public class GuessNumber {
     private int computerNumber = rand.nextInt(5) + 1;
     private boolean who;
     private byte luckyShot = 0;
-    Player first;
-    Player second;
+    private Player first;
+    private Player second;
 
     public GuessNumber(Player first, Player second) {
         this.first = first;
