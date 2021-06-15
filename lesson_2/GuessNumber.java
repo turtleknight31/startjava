@@ -5,7 +5,7 @@ public class GuessNumber {
     Scanner scanner = new Scanner(System.in);
     Random rand = new Random();
     private int userNumber;
-    private int computerNumber = rand.nextInt(5) + 1;
+    private int computerNumber = rand.nextInt(99) + 1;
     private boolean who;
     private byte luckyShot = 0;
     private Player first;
