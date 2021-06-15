@@ -5,24 +5,24 @@ public class GuessNumber {
     Scanner scanner = new Scanner(System.in);
     Random rand = new Random();
     private int userNumber;
-    private int computerNumber = rand.nextInt(99) + 1;
+    private int computerNumber = rand.nextInt(5) + 1;
     private boolean who;
     private byte luckyShot = 0;
     private String firstName;
     private String secondName;
-
+    Player first;
+    Player second;
+    
     public byte getLuckyShot() {
         return luckyShot;
     }
 
     public void firstPlayer() {
-        Player first = new Player(scanner.nextLine());
-        firstName = first.getName();
+         first = new Player(scanner.nextLine());
     }
 
     public void secondPlayer() {
-        Player second = new Player(scanner.nextLine());
-        secondName = second.getName();
+        second = new Player(scanner.nextLine());
     }
 
     public void start() {
@@ -43,9 +43,9 @@ public class GuessNumber {
         } else {
             luckyShot = 1;
             if(who) {
-                System.out.println(firstName + ", Поздравляю ты выиграл!!!");
+                System.out.println(first.getName() + ", Поздравляю ты выиграл!!!");
             } else {
-                System.out.println(secondName + ", Поздравляю ты выиграл!!");
+                System.out.println(second.getName() + ", Поздравляю ты выиграл!!");
             }
         }
     }
