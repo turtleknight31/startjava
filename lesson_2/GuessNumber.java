@@ -15,28 +15,35 @@ public class GuessNumber {
         return luckyShot;
     }
 
+    public GuessNumber(Player first, Player second) {
+        this.first = first;
+        this.second = second;
+    }
+
     public void start() {
-        who = !who;
+        do {
+            who = !who;
 
-        if(who) {
-            System.out.print("Первый игрок стреляет: ");
-        } else {
-            System.out.print("Второй игрок стреляет: ");
-        }
-
-        userNumber = scanner.nextInt();
-
-        if(computerNumber > userNumber) {
-            System.out.println("Данное число меньше того, что загадал компьютер");
-        } else if(computerNumber < userNumber) {
-            System.out.println("Данное число больше того, что загадал компьютер");
-        } else {
-            luckyShot = 1;
             if(who) {
-                System.out.println(first.getName() + ", Поздравляю ты выиграл!!!");
+                System.out.print("Первый игрок ходит: ");
             } else {
-                System.out.println(second.getName() + ", Поздравляю ты выиграл!!");
+                System.out.print("Второй игрок ходит: ");
             }
-        }
+
+            userNumber = scanner.nextInt();
+
+            if(computerNumber > userNumber) {
+                System.out.println("Данное число меньше того, что загадал компьютер");
+            } else if(computerNumber < userNumber) {
+                System.out.println("Данное число больше того, что загадал компьютер");
+            } else {
+                luckyShot = 1;
+                if(who) {
+                    System.out.println(first.getName() + ", Поздравляю ты выиграл!!!");
+                } else {
+                    System.out.println(second.getName() + ", Поздравляю ты выиграл!!");
+                }
+            }
+        } while(luckyShot != 1);
     }
 }
