@@ -1,3 +1,5 @@
+package src.com.startjava.lesson_2_3.game;
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -5,9 +7,8 @@ public class GuessNumber {
     Scanner scanner = new Scanner(System.in);
     Random rand = new Random();
     private int userNumber;
-    private int computerNumber = rand.nextInt(99) + 1;
+    private int computerNumber = rand.nextInt(100) + 1;
     private boolean who;
-    private byte luckyShot = 0;
     private Player first;
     private Player second;
 
@@ -33,13 +34,13 @@ public class GuessNumber {
             } else if(computerNumber < userNumber) {
                 System.out.println("Данное число больше того, что загадал компьютер");
             } else {
-                luckyShot = 1;
                 if(who) {
                     System.out.println(first.getName() + ", Поздравляю ты выиграл!!!");
                 } else {
                     System.out.println(second.getName() + ", Поздравляю ты выиграл!!");
                 }
+                break;
             }
-        } while(luckyShot != 1);
+        } while(true);
     }
 }
