@@ -1,4 +1,4 @@
-package lesson_2_3_4.arrayeven;
+package src.com.startjava.lesson_2_3_4.arrayeven;
 
 import java.util.Scanner;
 
