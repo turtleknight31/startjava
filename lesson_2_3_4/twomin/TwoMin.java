@@ -15,7 +15,7 @@ public class TwoMin {
         }
         int min1 = mass[0];
         int min2 = mass[0];
-        int[] index = new int[2];
+        int[] index = new int[3];
 
         for (int i = 0; i < n - 1; i++) {
             if(min1 > mass[i + 1]) {
