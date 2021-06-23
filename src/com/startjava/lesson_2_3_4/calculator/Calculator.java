@@ -1,46 +1,40 @@
 package src.com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
+    private String cal;
+    private int result;
 
-    public String sign;
-    public float num1;
-    public float num2;
-
-    public void setSign(String sign) {
-        this.sign = sign;
+    public int getResult() {
+        return result;
     }
 
-    public void setNum1(float num1) {
-        this.num1 = num1;
-    }
-
-    public void setNum2(float num2) {
-        this.num2 = num2;
+    public void setCal(String cal) {
+        this.cal = cal;
     }
 
     public void calculate() {
-        switch(sign) {
+        String[] words = cal.split(" ");
+        int num1 = Integer.parseInt(words[0]);
+        int num2 = Integer.parseInt(words[2]);
+
+        switch(words[1]) {
             case "+":
-                System.out.println(num1 + num2);
+                result = Math.addExact(num1, num2);
                 break;
             case "-":
-                System.out.println(num1 - num2);
+                result = Math.subtractExact(num1, num2);
                 break;
             case "*":
-                System.out.println(num1 * num2);
+                result = Math.multiplyExact(num1, num2);
                 break;
             case "/":
-                System.out.println(num1 / num2);
+                result = num1 / num2;
                 break;
             case "^":
-                float result = 1;
-                for(int i = 1; i <= num2; i++) {
-                    result *= num1;
-                }
-                System.out.println("num1 в степени num2 будет равным: " + result);
+                result = (int) Math.pow(num1, num2);
                 break;
             case "%":
-                System.out.println(num1 % num2);
+                result = num1 % num2;
                 break;
         }
     }
