@@ -41,7 +41,7 @@ public class Calculator {
         return 0;
     }
 
-    public String choice() {
+    public void choice() {
         do {
             choice = "yes";
             System.out.print("Вы хотите продолжить?[yes/no]: ");
@@ -51,6 +51,5 @@ public class Calculator {
                 System.out.println("Повторите пожалуйста ввод: ");
             }
         } while(!choice.equals("no") && !choice.equals("yes"));
-        return choice;
     }
 }
