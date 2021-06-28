@@ -18,7 +18,6 @@ public class CalculatorTest {
 
     public static void choice() {
         do {
-            choice = "yes";
             System.out.print("Вы хотите продолжить? [yes/no]: ");
             choice = scan.nextLine();
             if((!choice.equals("no")) && (!choice.equals("yes"))) {

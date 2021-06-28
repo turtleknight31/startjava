@@ -1,14 +1,14 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
-    private  String Expression;
+    private  String mathExpression;
 
     public Calculator(String mathExpression) {
-        this.Expression = mathExpression;
+        this.mathExpression = mathExpression;
     }
 
     public int calculate() {
-        String[] words = Expression.split(" ");
+        String[] words = mathExpression.split(" ");
         int num1 = Integer.parseInt(words[0]);
         int num2 = Integer.parseInt(words[2]);
 
