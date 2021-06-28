@@ -9,7 +9,7 @@ public class CalculatorTest {
         do {
             System.out.print("Введите выражение через пробел: ");
             Calculator calculator = new Calculator(scan.nextLine());
-            System.out.println("Результат: " + calculator.calculate());
+            System.out.println("Результат:  " + calculator.calculate());
         } while(isNext());
         System.out.println("Вы завершили вычисления!");
     }
