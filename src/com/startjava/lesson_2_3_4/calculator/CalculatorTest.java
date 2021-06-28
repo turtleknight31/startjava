@@ -4,24 +4,15 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        String choice = "yes";
         Scanner scan = new Scanner(System.in);
-        Calculator calculator = new Calculator();
+        Calculator calc = new Calculator();
 
         do {
             System.out.print("Введите выражение через пробел: ");
-            calculator.setCal(scan.nextLine());
-            calculator.calculate();
-            System.out.println("Результат: " + calculator.getResult());
-
-            do {
-                System.out.print("Вы хотите продолжить?[yes/no]: ");
-                choice = scan.nextLine();
-                if((!choice.equals("no")) && (!choice.equals("yes"))) {
-                    System.out.println("Повторите пожалуйста ввод: ");
-                }
-            } while(!choice.equals("no") && !choice.equals("yes"));
-        } while(choice.equals("yes"));
+            Calculator calculator = new Calculator(scan.nextLine());
+            System.out.println("Результат: " + calculator.calculate());
+            calc.choice();
+        } while(calc.getChoice().equals("yes"));
         System.out.println("Вы завершили вычисления!");
     }
 }

@@ -1,41 +1,56 @@
 package src.com.startjava.lesson_2_3_4.calculator;
 
+import java.util.Scanner;
+
 public class Calculator {
     private String cal;
-    private int result;
+    private String choice = "yes";
+    Scanner scan = new Scanner(System.in);
 
-    public int getResult() {
-        return result;
-    }
-
-    public void setCal(String cal) {
+    public Calculator(String cal) {
         this.cal = cal;
     }
 
-    public void calculate() {
+    public Calculator() {
+    }
+
+    public String getChoice() {
+        return choice;
+    }
+
+
+    public int calculate() {
         String[] words = cal.split(" ");
         int num1 = Integer.parseInt(words[0]);
         int num2 = Integer.parseInt(words[2]);
 
         switch(words[1]) {
             case "+":
-                result = Math.addExact(num1, num2);
-                break;
+                return Math.addExact(num1, num2);
             case "-":
-                result = Math.subtractExact(num1, num2);
-                break;
+                return Math.subtractExact(num1, num2);
             case "*":
-                result = Math.multiplyExact(num1, num2);
-                break;
+                return Math.multiplyExact(num1, num2);
             case "/":
-                result = num1 / num2;
-                break;
+                return num1 / num2;
             case "^":
-                result = (int) Math.pow(num1, num2);
-                break;
+                return (int) Math.pow(num1, num2);
             case "%":
-                result = num1 % num2;
-                break;
+                return num1 % num2;
         }
+        return 0;
+    }
+
+    public String choice() {
+        do {
+            choice = "yes";
+            System.out.print("Вы хотите продолжить?[yes/no]: ");
+
+            choice = scan.nextLine();
+            if((!choice.equals("no")) && (!choice.equals("yes"))) {
+                System.out.println("Повторите пожалуйста ввод: ");
+            }
+        } while(!choice.equals("no") && !choice.equals("yes"));
+        return choice;
     }
 }
