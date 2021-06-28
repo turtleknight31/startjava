@@ -1,4 +1,4 @@
-package src.com.startjava.lesson_2_3_4.maxnegativenumber;
+package com.startjava.lesson_2_3_4.maxnegativenumber;
 
 
 import java.util.Scanner;

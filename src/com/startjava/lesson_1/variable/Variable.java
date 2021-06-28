@@ -1,4 +1,4 @@
-package src.com.startjava.lesson_1.variable;
+package com.startjava.lesson_1.variable;
 
 public class Variable {
     public static void main(String[] args) {

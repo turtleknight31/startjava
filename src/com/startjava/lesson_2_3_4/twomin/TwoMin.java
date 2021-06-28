@@ -1,4 +1,4 @@
-package src.com.startjava.lesson_2_3_4.twomin;
+package com.startjava.lesson_2_3_4.twomin;
 
 import java.util.Scanner;
 
