@@ -3,7 +3,6 @@ package com.startjava.lesson_2_3_4.calculator;
 import java.util.Scanner;
 
 public class CalculatorTest {
-    static boolean isNext;
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -11,12 +10,11 @@ public class CalculatorTest {
             System.out.print("Введите выражение через пробел: ");
             Calculator calculator = new Calculator(scan.nextLine());
             System.out.println("Результат: " + calculator.calculate());
-            choice();
-        } while(!isNext);
+        } while(isNext());
         System.out.println("Вы завершили вычисления!");
     }
 
-    public static void choice() {
+    public static boolean isNext() {
         String choice;
         do {
             System.out.print("Вы хотите продолжить? [yes/no]: ");
@@ -24,9 +22,7 @@ public class CalculatorTest {
             if((!choice.equals("no")) && (!choice.equals("yes"))) {
                 System.out.println("Повторите пожалуйста ввод: ");
             }
-            if(choice.equals("no")) {
-                isNext = true;
-            }
         } while(!choice.equals("no") && !choice.equals("yes"));
+        return choice.equals("yes");
     }
 }
