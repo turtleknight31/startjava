@@ -18,7 +18,6 @@ public class Calculator {
         return choice;
     }
 
-
     public int calculate() {
         String[] words = cal.split(" ");
         int num1 = Integer.parseInt(words[0]);
@@ -37,15 +36,13 @@ public class Calculator {
                 return (int) Math.pow(num1, num2);
             case "%":
                 return num1 % num2;
-        }
-        return 0;
+        } return 0;
     }
 
     public void choice() {
         do {
             choice = "yes";
             System.out.print("Вы хотите продолжить?[yes/no]: ");
-
             choice = scan.nextLine();
             if((!choice.equals("no")) && (!choice.equals("yes"))) {
                 System.out.println("Повторите пожалуйста ввод: ");
