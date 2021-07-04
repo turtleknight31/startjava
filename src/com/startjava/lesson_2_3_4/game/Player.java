@@ -12,14 +12,9 @@ public class Player {
     }
 
     public Player() {
-
     }
 
     public String getName() {
         return names;
     }
-
-//    public int[] getArrayNumber() {
-//        return arrayNumber;
-//    }
 }
