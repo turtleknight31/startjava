@@ -1,20 +1,26 @@
 package com.startjava.lesson_2_3_4.game;
 
-import java.util.Arrays;
-
 public class Player {
-
-    private String names;
-     int[] arrayNumbers = new int[20];
-
-    public Player(String name) {
-        this.names = name;
-    }
+    private String name;
+    private int[] arrayNumbers ;
 
     public Player() {
     }
 
+    public Player(String name) {
+        this.name = name;
+    }
+
     public String getName() {
-        return names;
+        return name;
+    }
+
+    public int getArrayNumbers(int val) {
+        return arrayNumbers[val];
+    }
+
+    public void setArrayNumbers(int[] arrayNumbers) {
+        this.arrayNumbers = new int[arrayNumbers.length];
+        System.arraycopy(arrayNumbers, 0, this.arrayNumbers, 0, arrayNumbers.length);
     }
 }
