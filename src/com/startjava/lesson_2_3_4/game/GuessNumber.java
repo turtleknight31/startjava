@@ -10,14 +10,13 @@ public class GuessNumber {
     private int userNumber;
     private int computerNumber = rand.nextInt(100) + 1;
     private boolean who;
-    private String player1;
-    private String player2;
-    int[] arrayNumbers = new int[20];
-    Player player = new Player();
+    private Player playerOne;
+    private Player playerTwo;
+    int[] enteredNumbers = new int[20];
 
-    public GuessNumber(String player1, String player2) {
-        this.player1 = player1;
-        this.player2 = player2;
+    public GuessNumber(Player playerOne, Player playerTwo) {
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
     }
 
     public void start() {
@@ -25,30 +24,30 @@ public class GuessNumber {
         do {
             isWho();
             userNumber = scanner.nextInt();
-            arrayNumbers[i] = userNumber;
-            player.setArrayNumbers(arrayNumbers);
+            enteredNumbers[i] = userNumber;
+            playerOne.setEnteredNumbers(enteredNumbers);
             if (computerNumber > userNumber) {
                 System.out.println("Данное число меньше того, что загадал компьютер");
             } else if (computerNumber < userNumber) {
                 System.out.println("Данное число больше того, что загадал компьютер");
             } else {
                 if (who) {
-                    System.out.println(player1 + ", Поздравляю ты выиграл!!!");
-                    System.out.println(player1 + " Угадал с попытки " + (i / 2 + 1));
+                    System.out.println(playerOne.getName() + ", Поздравляю ты выиграл!!!");
+                    System.out.println(playerOne.getName() + " Угадал с попытки " + (i / 2 + 1));
                 } else {
-                    System.out.println(player2 + ", Поздравляю ты выиграл!!");
-                    System.out.println(player2 + " Угадал с попытки " + (i / 2 + 1));
+                    System.out.println(playerTwo.getName() + ", Поздравляю ты выиграл!!");
+                    System.out.println(playerTwo.getName() + " Угадал с попытки " + (i / 2 + 1));
                 }
                 voidNumber();
                 System.out.print("\n");
-                Arrays.fill(arrayNumbers, 0, i, 0);
+                Arrays.fill(enteredNumbers, 0, i, 0);
                 break;
             }
 
-            if (player.getArrayNumbers(18) != 0) {
-                System.out.println("У пользователя " + player1 + " закончились попытки");
-            } else if (player.getArrayNumbers(19) != 0) {
-                System.out.println("У пользователя " + player2 + " закончились попытки");
+            if (playerOne.getEnteredNumbers(18) != 0) {
+                System.out.println("У пользователя " + playerOne.getName() + " закончились попытки");
+            } else if (playerOne.getEnteredNumbers(19) != 0) {
+                System.out.println("У пользователя " + playerTwo.getName() + " закончились попытки");
                 voidNumber();
                 System.out.print("\n");
                 break;
@@ -69,15 +68,15 @@ public class GuessNumber {
     public void voidNumber() {
         System.out.print("Все значения первого  игрока: ");
         for (int j = 0; j < 20; j+=2) {            //Можно уже использовать геттер
-            if (player.getArrayNumbers(j) != 0) {
-                System.out.print(" " + player.getArrayNumbers(j));
+            if (playerOne.getEnteredNumbers(j) != 0) {
+                System.out.print(" " + playerOne.getEnteredNumbers(j));
             }
         }
         System.out.print("\n");
         System.out.print("Все значения второго  игрока: ");
         for (int j = 1; j < 20; j+=2) {
-            if (player.getArrayNumbers(j) != 0) {
-                System.out.print(" " + player.getArrayNumbers(j));
+            if (playerOne.getEnteredNumbers(j) != 0) {
+                System.out.print(" " + playerOne.getEnteredNumbers(j));
             }
         }
     }
