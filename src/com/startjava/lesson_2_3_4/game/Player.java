@@ -2,7 +2,7 @@ package com.startjava.lesson_2_3_4.game;
 
 public class Player {
     private String name;
-    private int[] enteredNumbers;
+    private int[] enteredNumbers = new int[20];
 
     public Player(String name) {
         this.name = name;
@@ -12,12 +12,11 @@ public class Player {
         return name;
     }
 
-    public int getEnteredNumbers(int val) {
-        return enteredNumbers[val];
+    public int getEnteredNumbers(int number) {
+        return enteredNumbers[number];
     }
 
-    public void setEnteredNumbers(int[] enteredNumbers) {
-        this.enteredNumbers = new int[enteredNumbers.length];
-        System.arraycopy(enteredNumbers, 0, this.enteredNumbers, 0, enteredNumbers.length);
+    public void setEnteredNumbers(int numbers, int arrayNumbers) {
+        this.enteredNumbers[numbers] = arrayNumbers;
     }
 }
