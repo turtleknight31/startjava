@@ -35,10 +35,7 @@ public class GuessNumber {
         System.out.print("Все значения второго  игрока: ");
         showEnteredNumbers(1);
         System.out.print("\n");
-
-        for(int j = 0; j < i; j++) {
-            playerOne.setEnteredNumber(j, 0);
-        }
+        playerOne.clearArray(i + 1);
     }
 
     public void isWho() {
