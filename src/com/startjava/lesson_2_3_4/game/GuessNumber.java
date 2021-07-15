@@ -18,7 +18,7 @@ public class GuessNumber {
     }
 
     public void start() {
-        int i = checkNumbers();
+        int i = makeMove();
 
         if(computerNumber == userNumber) {
             if (who) {
@@ -29,11 +29,15 @@ public class GuessNumber {
                 System.out.println(playerTwo.getName() + " Угадал с попытки " + ((i + 1)/ 2));
             }
         }
-        enteredPlayerNumbers();
+        System.out.print("Все значения первого  игрока: ");
+        showEnteredNumbers(0);
+        System.out.print("\n");
+        System.out.print("Все значения второго  игрока: ");
+        showEnteredNumbers(1);
         System.out.print("\n");
 
         for(int j = 0; j < i; j++) {
-            playerOne.setEnteredNumbers(j, 0);
+            playerOne.setEnteredNumber(j, 0);
         }
     }
 
@@ -46,28 +50,20 @@ public class GuessNumber {
         }
     }
 
-    public void enteredPlayerNumbers() {
-        System.out.print("Все значения первого  игрока: ");
-        for (int j = 0; j < 20; j+=2) {
-            if (playerOne.getEnteredNumbers(j) != 0) {
-                System.out.print(" " + playerOne.getEnteredNumbers(j));
-            }
-        }
-        System.out.print("\n");
-        System.out.print("Все значения второго  игрока: ");
-        for (int j = 1; j < 20; j+=2) {
-            if (playerOne.getEnteredNumbers(j) != 0) {
-                System.out.print(" " + playerOne.getEnteredNumbers(j));
+    public void showEnteredNumbers(int k) {
+        for (int j = k; j < 20; j+=2) {
+            if (playerOne.getEnteredNumber(j) != 0) {
+                System.out.print(" " + playerOne.getEnteredNumber(j));
             }
         }
     }
 
-    public int checkNumbers() {
+    public int makeMove() {
         int i = 0;
         do {
             isWho();
             userNumber = scanner.nextInt();
-            playerOne.setEnteredNumbers(i, userNumber);
+            playerOne.setEnteredNumber(i, userNumber);
             if (computerNumber > userNumber) {
                 System.out.println("Данное число меньше того, что загадал компьютер");
             } else if (computerNumber < userNumber) {

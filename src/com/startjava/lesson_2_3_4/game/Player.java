@@ -12,11 +12,11 @@ public class Player {
         return name;
     }
 
-    public int getEnteredNumbers(int number) {
+    public int getEnteredNumber(int number) {
         return enteredNumbers[number];
     }
 
-    public void setEnteredNumbers(int numbers, int arrayNumbers) {
-        this.enteredNumbers[numbers] = arrayNumbers;
+    public void setEnteredNumber(int numbers, int arrayNumbers) {
+        enteredNumbers[numbers] = arrayNumbers;
     }
 }

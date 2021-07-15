@@ -5,26 +5,27 @@ import java.util.Scanner;
 public class GuessNumberTest {
     static Scanner scan = new Scanner(System.in);
 
+
     public static void main(String[] args) {
         do {
-            enteredPlayers();
-        } while (isNext());
+            GuessNumber game = new GuessNumber(enteredFirstPlayer(), enteredSecondPlayer());
+            game.start();
+        } while (checkChoice());
     }
 
-    public static boolean isNext() {
-        return checkChoice().equals("yes");
-    }
-
-    public static void enteredPlayers() {
+    public static Player enteredFirstPlayer() {
         System.out.print("Введите имя первого игрока: ");
         Player playerOne = new Player(scan.next());
-        System.out.print("Введите имя второго игрока: ");
-        Player playerTwo = new Player(scan.next());
-        GuessNumber game = new GuessNumber(playerOne, playerTwo);
-        game.start();
+        return playerOne;
     }
 
-    public static String checkChoice() {
+    public static Player enteredSecondPlayer() {
+        System.out.print("Введите имя второго игрока: ");
+        Player playerTwo = new Player(scan.next());
+        return playerTwo;
+    }
+
+    public static boolean checkChoice() {
         String choice;
         System.out.print("Вы хотите продолжить? [yes/no]: ");
         do {
@@ -33,6 +34,6 @@ public class GuessNumberTest {
                 System.out.println("Повторите пожалуйста ввод: ");
             }
         } while (!choice.equals("no") && !choice.equals("yes"));
-        return choice;
+        return choice.equals("yes");
     }
 }
