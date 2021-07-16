@@ -14,15 +14,15 @@ public class Player {
         return name;
     }
 
-    public int getEnteredNumber(int number) {
-        return enteredNumbers[number];
+    public int getEnteredNumber(int index) {
+        return enteredNumbers[index];
     }
 
-    public void setEnteredNumber(int numbers, int arrayNumbers) {
-        enteredNumbers[numbers] = arrayNumbers;
+    public void setEnteredNumber(int index, int number) {
+        enteredNumbers[index] = number;
     }
 
-    public void clearArray(int i) {
-        Arrays.fill(enteredNumbers, 0, i, 0);
+    public void clearArray(int count) {
+        Arrays.fill(enteredNumbers, 0, count, 0);
     }
 }

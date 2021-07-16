@@ -8,21 +8,16 @@ public class GuessNumberTest {
 
     public static void main(String[] args) {
         do {
-            GuessNumber game = new GuessNumber(enteredFirstPlayer(), enteredSecondPlayer());
+            Player playerOne = createPlayer(1);
+            Player playerTwo = createPlayer(2);
+            GuessNumber game = new GuessNumber(playerOne, playerTwo);
             game.start();
         } while (checkChoice());
     }
 
-    public static Player enteredFirstPlayer() {
-        System.out.print("Введите имя первого игрока: ");
-        Player playerOne = new Player(scan.next());
-        return playerOne;
-    }
-
-    public static Player enteredSecondPlayer() {
-        System.out.print("Введите имя второго игрока: ");
-        Player playerTwo = new Player(scan.next());
-        return playerTwo;
+    public static Player createPlayer(int number) {
+        System.out.print("Введите имя " + number + "го игрока: ");
+        return new Player(scan.next());
     }
 
     public static boolean checkChoice() {
