@@ -2,6 +2,7 @@ package com.startjava.lesson_2_3_4.game;
 
 import java.util.Scanner;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public class GuessNumber {
     Scanner scanner = new Scanner(System.in);
@@ -70,11 +71,7 @@ public class GuessNumber {
     }
 
     public void showEnteredNumbers(int k) {
-        for (int j = k; j < 20; j+=2) {
-            if (playerOne.getEnteredNumber(j) != 0) {
-                System.out.print(" " + playerOne.getEnteredNumber(j));
-            }
-        }
+        IntStream.iterate(k, j -> j < 20, j -> j + 2).filter(j -> playerOne.getEnteredNumber(j) != 0).mapToObj(j -> " " + playerOne.getEnteredNumber(j)).forEach(System.out::print);
     }
 }
 
